@@ -22,6 +22,13 @@ Uses Apple's [isiOSAppOnMac function](https://developer.apple.com/documentation/
 
 This function only works on iOS 14 and above so the result will always return false on apps that are below iOS 14.
 
+<img width="1085" alt="AppleSilconMac" src="https://github.com/alexrabin/is_ios_app_on_mac/assets/15949910/512d7de4-10b5-45b3-bafa-185670c60340">
+
+<img width="667" alt="iPadExample" src="https://github.com/alexrabin/is_ios_app_on_mac/assets/15949910/5ce17f11-c932-461e-b6ee-c547587e8fdb">
+
+<img width="446" alt="AndroidExample" src="https://github.com/alexrabin/is_ios_app_on_mac/assets/15949910/d43a4a20-b6a4-4900-bee3-493a16b2b0a2">
+
+
 ## Usage
 
 

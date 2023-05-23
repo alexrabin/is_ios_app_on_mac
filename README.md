@@ -1,5 +1,7 @@
 # is_ios_app_on_mac
-
+<p align="center">
+ <img src="https://github.com/alexrabin/is_ios_app_on_mac/assets/15949910/2f74ade2-ba57-42db-b4d0-e3b410e7d256" width=250/>
+</p>
 <p align="center">
  <a href="https://pub.dartlang.org/packages/is_ios_app_on_mac">
     <img alt="is_ios_app_on_mac" src="https://img.shields.io/pub/v/is_ios_app_on_mac.svg">

@@ -1,7 +1,5 @@
 # is_ios_app_on_mac
 
-A Flutter plugin that checks to see if your Flutter iOS app is being run on an Apple Silicon Mac.
-
 <p align="center">
  <a href="https://pub.dartlang.org/packages/is_ios_app_on_mac">
     <img alt="is_ios_app_on_mac" src="https://img.shields.io/pub/v/is_ios_app_on_mac.svg">
@@ -17,6 +15,7 @@ A Flutter plugin that checks to see if your Flutter iOS app is being run on an A
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/alexrabin/is_ios_app_on_mac?style=social">
 </p>
 
+A Flutter plugin that checks to see if your Flutter iOS app is being run on an Apple Silicon Mac.
 
 Uses Apple's [isiOSAppOnMac function](https://developer.apple.com/documentation/foundation/processinfo/3608556-isiosapponmac).
 

@@ -18,6 +18,9 @@
 A Flutter plugin that checks to see if your Flutter iOS app is being run on an Apple Silicon Mac.
 
 Uses Apple's [isiOSAppOnMac function](https://developer.apple.com/documentation/foundation/processinfo/3608556-isiosapponmac).
+From Apple's Documentation:
+
+> The value of this property is true only when the process is an iOS app running on a Mac. The value of the property is false for all other apps on the Mac, including Mac apps built using Mac Catalyst. The property is also false for processes running on platforms other than macOS.
 
 This function only works on iOS 14 and above so the result will always return false on apps that are below iOS 14.
 

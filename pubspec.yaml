@@ -1,7 +1,7 @@
 name: is_ios_app_on_mac
 description: This plugin checks to see if your iOS app is being run on an Apple Silicon Mac.
 
-version: 0.0.1+1
+version: 0.0.1+2
 homepage: https://www.alexrabin.com
 repository: https://github.com/alexrabin/is_ios_app_on_mac
 

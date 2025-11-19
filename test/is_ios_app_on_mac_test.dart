@@ -9,6 +9,9 @@ class MockIsIosAppOnMacPlatform
     implements IsIosAppOnMacPlatform {
   @override
   Future<bool> isiOSAppOnMac() => Future.value(false);
+
+  @override
+  Future<bool> isiOSAppOnVision() => Future.value(false);
 }
 
 void main() {
@@ -24,5 +27,13 @@ void main() {
     IsIosAppOnMacPlatform.instance = fakePlatform;
 
     expect(await isIosAppOnMacPlugin.isiOSAppOnMac(), false);
+  });
+
+  test('isiOSAppOnVision', () async {
+    IsIosAppOnMac isIosAppOnMacPlugin = IsIosAppOnMac();
+    MockIsIosAppOnMacPlatform fakePlatform = MockIsIosAppOnMacPlatform();
+    IsIosAppOnMacPlatform.instance = fakePlatform;
+
+    expect(await isIosAppOnMacPlugin.isiOSAppOnVision(), false);
   });
 }

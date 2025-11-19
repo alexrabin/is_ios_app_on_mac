@@ -10,8 +10,10 @@ public class IsIosAppOnMacPlugin: NSObject, FlutterPlugin {
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
-    case "checkPlatform":
+    case "isiOSAppOnMac":
       result(isiOSAppOnMac())
+    case "isiOSAppOnVision":
+      result(isiOSAppOnVision())
     default:
       result(FlutterMethodNotImplemented)
     }
@@ -23,4 +25,11 @@ public class IsIosAppOnMacPlugin: NSObject, FlutterPlugin {
       }
       return false
     }
+
+  private func isiOSAppOnVision() -> Bool {
+    if #available(iOS 26.1, *) {
+      return ProcessInfo.processInfo.isiOSAppOnVision
+    }
+    return false
+  }
 }

@@ -17,7 +17,20 @@ class MethodChannelIsIosAppOnMac extends IsIosAppOnMacPlatform {
       return false;
     }
     try {
-      final value = await methodChannel.invokeMethod<bool>('checkPlatform');
+      final value = await methodChannel.invokeMethod<bool>('isiOSAppOnMac');
+      return value ?? false;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  @override
+  Future<bool> isiOSAppOnVision() async {
+    if (!Platform.isIOS) {
+      return false;
+    }
+    try {
+      final value = await methodChannel.invokeMethod<bool>('isiOSAppOnVision');
       return value ?? false;
     } catch (e) {
       return false;

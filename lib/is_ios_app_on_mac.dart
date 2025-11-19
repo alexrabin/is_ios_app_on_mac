@@ -4,4 +4,8 @@ class IsIosAppOnMac {
   Future<bool> isiOSAppOnMac() {
     return IsIosAppOnMacPlatform.instance.isiOSAppOnMac();
   }
+
+  Future<bool> isiOSAppOnVision() {
+    return IsIosAppOnMacPlatform.instance.isiOSAppOnVision();
+  }
 }

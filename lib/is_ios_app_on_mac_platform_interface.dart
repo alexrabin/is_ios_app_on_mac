@@ -26,4 +26,8 @@ abstract class IsIosAppOnMacPlatform extends PlatformInterface {
   Future<bool> isiOSAppOnMac() {
     throw UnimplementedError('isiOSAppOnMac() has not been implemented.');
   }
+
+  Future<bool> isiOSAppOnVision() {
+    throw UnimplementedError('isiOSAppOnVision() has not been implemented.');
+  }
 }

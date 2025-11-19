@@ -1,4 +1,5 @@
 # is_ios_app_on_mac
+
 <p align="center">
  <img src="https://github.com/alexrabin/is_ios_app_on_mac/assets/15949910/2f74ade2-ba57-42db-b4d0-e3b410e7d256" width=250/>
 </p>
@@ -17,14 +18,25 @@
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/alexrabin/is_ios_app_on_mac?style=social">
 </p>
 
-A Flutter plugin that checks to see if your Flutter iOS app is being run on an Apple Silicon Mac.
+A Flutter plugin that detects whether your iOS app is running on an Apple Silicon Mac or visionOS.
 
-Uses Apple's [isiOSAppOnMac function](https://developer.apple.com/documentation/foundation/processinfo/3608556-isiosapponmac).
-From Apple's Documentation:
+## Features
 
-> The value of this property is true only when the process is an iOS app running on a Mac. The value of the property is false for all other apps on the Mac, including Mac apps built using Mac Catalyst. The property is also false for processes running on platforms other than macOS.
+This plugin leverages Apple's native APIs to provide accurate platform detection:
 
-This function only works on iOS 14 and above so the result will always return false on apps that are below iOS 14.
+- **[isiOSAppOnMac](https://developer.apple.com/documentation/foundation/processinfo/3608556-isiosapponmac)** - Detects when your iOS app is running on a Mac
+- **[isiOSAppOnVision](https://developer.apple.com/documentation/foundation/processinfo/isiosapponvision)** - Detects when your iOS app is running on visionOS
+
+### How It Works
+
+According to Apple's documentation, `isiOSAppOnMac`:
+
+> Returns `true` only when the process is an iOS app running on a Mac. Returns `false` for all other apps on the Mac, including Mac apps built using Mac Catalyst, and for processes running on platforms other than macOS.
+
+### Platform Requirements
+
+- **isiOSAppOnMac**: Requires iOS 14.0 or later (returns `false` on earlier versions)
+- **isiOSAppOnVision**: Requires iOS 26.0 or later (returns `false` on earlier versions)
 
 <img width="600" alt="AppleSilconMac" src="https://github.com/alexrabin/is_ios_app_on_mac/assets/15949910/512d7de4-10b5-45b3-bafa-185670c60340"/>
 
@@ -34,16 +46,15 @@ This function only works on iOS 14 and above so the result will always return fa
 
 <br/>
 
-
 <img width="300" alt="AndroidExample" src="https://github.com/alexrabin/is_ios_app_on_mac/assets/15949910/d43a4a20-b6a4-4900-bee3-493a16b2b0a2"/>
 
-
 ## Usage
-
 
 ```dart
 import 'package:is_ios_app_on_mac/is_ios_app_on_mac.dart';
 
 const isOnMac = await IsIosAppOnMac().isiOSAppOnMac()
+
+const isOnVisionOS = await IsIosAppOnMac().isiOSAppOnVision()
 
 ```

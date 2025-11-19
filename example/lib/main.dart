@@ -30,14 +30,36 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Is iOS App on Mac'),
         ),
         body: Center(
-          child: FutureBuilder(
-              future: _isIosAppOnMacPlugin.isiOSAppOnMac(),
-              builder: (context, snapshot) {
-                final isiOSAppOnMac = snapshot.data ?? false;
-                return Text(isiOSAppOnMac
-                    ? "iOS App is running on a Mac ✅"
-                    : '${Platform.isAndroid ? 'Android' : 'iOS'} App is not running on a Mac ❌');
-              }),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              FutureBuilder(
+                  future: _isIosAppOnMacPlugin.isiOSAppOnMac(),
+                  builder: (context, snapshot) {
+                    final isiOSAppOnMac = snapshot.data ?? false;
+                    return Text(
+                      isiOSAppOnMac
+                          ? "iOS App is running on a Mac ✅"
+                          : '${Platform.isAndroid ? 'Android' : 'iOS'} App is not running on a Mac ❌',
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(fontSize: 18),
+                    );
+                  }),
+              const SizedBox(height: 20),
+              FutureBuilder(
+                  future: _isIosAppOnMacPlugin.isiOSAppOnVision(),
+                  builder: (context, snapshot) {
+                    final isiOSAppOnVision = snapshot.data ?? false;
+                    return Text(
+                      isiOSAppOnVision
+                          ? "iOS App is running on visionOS ✅"
+                          : '${Platform.isAndroid ? 'Android' : 'iOS'} App is not running on visionOS ❌',
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(fontSize: 18),
+                    );
+                  }),
+            ],
+          ),
         ),
       ),
     );

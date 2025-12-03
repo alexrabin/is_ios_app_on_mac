@@ -1,3 +1,7 @@
+## 0.0.2+1
+
+- Fixed macOS from not building
+
 ## 0.0.2
 
 - Add support for detecting if a Flutter app is being run on visionOS. Thank you [OutDatedGuy](https://github.com/OutdatedGuy)!

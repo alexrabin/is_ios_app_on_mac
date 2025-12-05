@@ -53,8 +53,8 @@ According to Apple's documentation, `isiOSAppOnMac`:
 ```dart
 import 'package:is_ios_app_on_mac/is_ios_app_on_mac.dart';
 
-const isOnMac = await IsIosAppOnMac().isiOSAppOnMac()
+const isOnMac = await IsIosAppOnMac.isiOSAppOnMac()
 
-const isOnVisionOS = await IsIosAppOnMac().isiOSAppOnVision()
+const isOnVisionOS = await IsIosAppOnMac.isiOSAppOnVision()
 
 ```

@@ -22,18 +22,16 @@ void main() {
   });
 
   test('isiOSAppOnMac', () async {
-    IsIosAppOnMac isIosAppOnMacPlugin = IsIosAppOnMac();
     MockIsIosAppOnMacPlatform fakePlatform = MockIsIosAppOnMacPlatform();
     IsIosAppOnMacPlatform.instance = fakePlatform;
 
-    expect(await isIosAppOnMacPlugin.isiOSAppOnMac(), false);
+    expect(await IsIosAppOnMac.isiOSAppOnMac(), false);
   });
 
   test('isiOSAppOnVision', () async {
-    IsIosAppOnMac isIosAppOnMacPlugin = IsIosAppOnMac();
     MockIsIosAppOnMacPlatform fakePlatform = MockIsIosAppOnMacPlatform();
     IsIosAppOnMacPlatform.instance = fakePlatform;
 
-    expect(await isIosAppOnMacPlugin.isiOSAppOnVision(), false);
+    expect(await IsIosAppOnMac.isiOSAppOnVision(), false);
   });
 }

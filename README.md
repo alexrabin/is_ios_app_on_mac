@@ -36,7 +36,7 @@ According to Apple's documentation, `isiOSAppOnMac`:
 ### Platform Requirements
 
 - **isiOSAppOnMac**: Requires iOS 14.0 or later (returns `false` on earlier versions)
-- **isiOSAppOnVision**: Requires iOS 26.0 or later (returns `false` on earlier versions)
+- **isiOSAppOnVision**: Requires iOS 26.1 or later (returns `false` on earlier versions)
 
 <img width="600" alt="AppleSilconMac" src="https://github.com/alexrabin/is_ios_app_on_mac/assets/15949910/512d7de4-10b5-45b3-bafa-185670c60340"/>
 

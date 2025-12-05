@@ -15,8 +15,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final _isIosAppOnMacPlugin = IsIosAppOnMac();
-
   @override
   void initState() {
     super.initState();
@@ -34,7 +32,7 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               FutureBuilder(
-                  future: _isIosAppOnMacPlugin.isiOSAppOnMac(),
+                  future: IsIosAppOnMac.isiOSAppOnMac(),
                   builder: (context, snapshot) {
                     final isiOSAppOnMac = snapshot.data ?? false;
                     return Text(
@@ -47,7 +45,7 @@ class _MyAppState extends State<MyApp> {
                   }),
               const SizedBox(height: 20),
               FutureBuilder(
-                  future: _isIosAppOnMacPlugin.isiOSAppOnVision(),
+                  future: IsIosAppOnMac.isiOSAppOnVision(),
                   builder: (context, snapshot) {
                     final isiOSAppOnVision = snapshot.data ?? false;
                     return Text(

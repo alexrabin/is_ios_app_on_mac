@@ -15,8 +15,7 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   testWidgets('isiOSAppOnMac test', (WidgetTester tester) async {
-    final IsIosAppOnMac plugin = IsIosAppOnMac();
-    final bool version = await plugin.isiOSAppOnMac();
+    final bool version = await IsIosAppOnMac.isiOSAppOnMac();
     // The version string depends on the host platform running the test, so
     // just assert that some non-empty string is returned.
     expect(version, true);

@@ -13,7 +13,7 @@ class MethodChannelIsIosAppOnMac extends IsIosAppOnMacPlatform {
 
   @override
   Future<bool> isiOSAppOnMac() async {
-    if (!Platform.isIOS) {
+    if (kIsWeb || !Platform.isIOS) {
       return false;
     }
     try {
@@ -26,7 +26,7 @@ class MethodChannelIsIosAppOnMac extends IsIosAppOnMacPlatform {
 
   @override
   Future<bool> isiOSAppOnVision() async {
-    if (!Platform.isIOS) {
+    if (kIsWeb || !Platform.isIOS) {
       return false;
     }
     try {

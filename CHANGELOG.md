@@ -1,3 +1,7 @@
+## 0.0.3
+
+- Fixed Web from building and changed methods to be static for better usability.
+
 ## 0.0.2+1
 
 - Fixed macOS from not building

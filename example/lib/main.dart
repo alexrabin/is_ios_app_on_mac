@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:is_ios_app_on_mac/is_ios_app_on_mac.dart';
 
@@ -31,31 +32,38 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              FutureBuilder(
-                  future: IsIosAppOnMac.isiOSAppOnMac(),
-                  builder: (context, snapshot) {
-                    final isiOSAppOnMac = snapshot.data ?? false;
-                    return Text(
-                      isiOSAppOnMac
-                          ? "iOS App is running on a Mac ✅"
-                          : '${Platform.isAndroid ? 'Android' : 'iOS'} App is not running on a Mac ❌',
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(fontSize: 18),
-                    );
-                  }),
+              Text(
+                'Running on: ${kIsWeb ? "Web" : Platform.operatingSystem}',
+                style: const TextStyle(fontSize: 18),
+              ),
               const SizedBox(height: 20),
               FutureBuilder(
-                  future: IsIosAppOnMac.isiOSAppOnVision(),
-                  builder: (context, snapshot) {
-                    final isiOSAppOnVision = snapshot.data ?? false;
-                    return Text(
-                      isiOSAppOnVision
-                          ? "iOS App is running on visionOS ✅"
-                          : '${Platform.isAndroid ? 'Android' : 'iOS'} App is not running on visionOS ❌',
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(fontSize: 18),
-                    );
-                  }),
+                future: IsIosAppOnMac.isiOSAppOnMac(),
+                builder: (context, snapshot) {
+                  final isiOSAppOnMac = snapshot.data ?? false;
+                  return Text(
+                    isiOSAppOnMac
+                        ? "iOS App is running on a Mac ✅"
+                        : '${Platform.isAndroid ? 'Android' : 'iOS'} App is not running on a Mac ❌',
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 18),
+                  );
+                },
+              ),
+              const SizedBox(height: 20),
+              FutureBuilder(
+                future: IsIosAppOnMac.isiOSAppOnVision(),
+                builder: (context, snapshot) {
+                  final isiOSAppOnVision = snapshot.data ?? false;
+                  return Text(
+                    isiOSAppOnVision
+                        ? "iOS App is running on visionOS ✅"
+                        : '${Platform.isAndroid ? 'Android' : 'iOS'} App is not running on visionOS ❌',
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 18),
+                  );
+                },
+              ),
             ],
           ),
         ),

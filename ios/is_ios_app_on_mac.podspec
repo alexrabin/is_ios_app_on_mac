@@ -25,5 +25,5 @@ This plugin checks to see if your iOS app is being run on an Apple Silicon Mac o
   # required reason APIs, update the PrivacyInfo.xcprivacy file to describe your
   # plugin's privacy impact, and then uncomment this line. For more information,
   # see https://developer.apple.com/documentation/bundleresources/privacy_manifest_files
-  # s.resource_bundles = {'is_ios_app_on_mac_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
+  s.resource_bundles = {'is_ios_app_on_mac_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
 end

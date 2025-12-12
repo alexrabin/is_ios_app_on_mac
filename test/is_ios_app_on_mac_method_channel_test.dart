@@ -23,7 +23,7 @@ void main() {
         .setMockMethodCallHandler(channel, null);
   });
 
-  test('getPlatformVersion', () async {
+  test('isiOSAppOnMac', () async {
     expect(await platform.isiOSAppOnMac(), false);
   });
 }

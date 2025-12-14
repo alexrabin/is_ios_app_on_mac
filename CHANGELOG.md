@@ -1,5 +1,6 @@
 ## 0.1.0
 
+- **Breaking Change:** Dropped support for iOS 12 and below
 - Updated plugin to Flutter 3.38 standards
 - Added Swift Package Manager support
 - Improved README and added screenshots

@@ -24,7 +24,7 @@ A Flutter plugin that detects whether your iOS app is running on an Apple Silico
 
 This plugin leverages Apple's native APIs to provide accurate platform detection:
 
-- **[isiOSAppOnMac](https://developer.apple.com/documentation/foundation/processinfo/3608556-isiosapponmac)** - Detects when your iOS app is running on a Mac
+- **[isiOSAppOnMac](https://developer.apple.com/documentation/foundation/processinfo/isiosapponmac)** - Detects when your iOS app is running on a Mac
 - **[isiOSAppOnVision](https://developer.apple.com/documentation/foundation/processinfo/isiosapponvision)** - Detects when your iOS app is running on visionOS
 
 ### How It Works
@@ -33,28 +33,45 @@ According to Apple's documentation, `isiOSAppOnMac`:
 
 > Returns `true` only when the process is an iOS app running on a Mac. Returns `false` for all other apps on the Mac, including Mac apps built using Mac Catalyst, and for processes running on platforms other than macOS.
 
+According to Apple's documentation, `isiOSAppOnVision`:
+
+> Returns `true` only when the process is an iOS app running on visionOS. Returns `false` for every other platform.
+
 ### Platform Requirements
 
 - **isiOSAppOnMac**: Requires iOS 14.0 or later (returns `false` on earlier versions)
 - **isiOSAppOnVision**: Requires iOS 26.1 or later (returns `false` on earlier versions)
 
-<img width="600" alt="AppleSilconMac" src="https://github.com/alexrabin/is_ios_app_on_mac/assets/15949910/512d7de4-10b5-45b3-bafa-185670c60340"/>
+## Screenshots
 
-<br/>
+| Mac (Designed for iPad)      | Vision Pro (Designed for iPad)      |
+| ---------------------------- | ----------------------------------- |
+| ![][Mac (Designed for iPad)] | ![][Vision Pro (Designed for iPad)] |
 
-<img width="500" alt="iPadExample" src="https://github.com/alexrabin/is_ios_app_on_mac/assets/15949910/5ce17f11-c932-461e-b6ee-c547587e8fdb"/>
+| iPad      | macOS      |
+| --------- | ---------- |
+| ![][iPad] | ![][macOS] |
 
-<br/>
-
-<img width="300" alt="AndroidExample" src="https://github.com/alexrabin/is_ios_app_on_mac/assets/15949910/d43a4a20-b6a4-4900-bee3-493a16b2b0a2"/>
+| iPhone      | Android      |
+| ----------- | ------------ |
+| ![][iPhone] | ![][Android] |
 
 ## Usage
 
 ```dart
 import 'package:is_ios_app_on_mac/is_ios_app_on_mac.dart';
 
-const isOnMac = await IsIosAppOnMac.isiOSAppOnMac()
+final isOnMac = await IsIosAppOnMac.isiOSAppOnMac()
 
-const isOnVisionOS = await IsIosAppOnMac.isiOSAppOnVision()
+final isOnVisionOS = await IsIosAppOnMac.isiOSAppOnVision()
 
 ```
+
+<!-- Screenshot Links -->
+
+[Mac (Designed for iPad)]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/Mac%20(Designed%20for%20iPad).png
+[Vision Pro (Designed for iPad)]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/Vision%20Pro%20(Designed%20for%20iPad).png
+[iPhone]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/iPhone.png
+[Android]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/Android.png
+[iPad]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/iPad.png
+[macOS]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/macOS.png

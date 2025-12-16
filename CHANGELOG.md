@@ -7,6 +7,19 @@
 
 ## 0.0.3
 
+- **Breaking Change:** `isiOSAppOnMac` and `isiOSAppOnVision` are now static methods.
+
+  ```dart
+  // Before
+  final instance = IsIosAppOnMac();
+  final isiOSOnMac = await instance.isiOSAppOnMac();
+  final isiOSOnVision = await instance.isiOSAppOnVision();
+
+  // After
+  final isiOSOnMac = await IsIosAppOnMac.isiOSAppOnMac();
+  final isiOSOnVision = await IsIosAppOnMac.isiOSAppOnVision();
+  ```
+
 - Fixed Web from building and changed methods to be static for better usability.
 
 ## 0.0.2+1

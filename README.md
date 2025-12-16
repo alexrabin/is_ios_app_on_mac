@@ -44,17 +44,17 @@ According to Apple's documentation, `isiOSAppOnVision`:
 
 ## Screenshots
 
-| Mac (Designed for iPad)      | Vision Pro (Designed for iPad)      |
-| ---------------------------- | ----------------------------------- |
-| ![][Mac (Designed for iPad)] | ![][Vision Pro (Designed for iPad)] |
+| Mac (Designed for iPad)              | Vision Pro (Designed for iPad)                 |
+| ------------------------------------ | ---------------------------------------------- |
+| ![Mac (Designed for iPad)][mac-ipad] | ![Vision Pro (Designed for iPad)][vision-ipad] |
 
-| iPad      | macOS      |
-| --------- | ---------- |
-| ![][iPad] | ![][macOS] |
+| iPad          | macOS           |
+| ------------- | --------------- |
+| ![iPad][ipad] | ![macOS][macos] |
 
-| iPhone      | Android      |
-| ----------- | ------------ |
-| ![][iPhone] | ![][Android] |
+| iPhone            | Android             |
+| ----------------- | ------------------- |
+| ![iPhone][iphone] | ![Android][android] |
 
 ## Usage
 
@@ -69,9 +69,9 @@ final isOnVisionOS = await IsIosAppOnMac.isiOSAppOnVision()
 
 <!-- Screenshot Links -->
 
-[Mac (Designed for iPad)]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/Mac%20(Designed%20for%20iPad).png
-[Vision Pro (Designed for iPad)]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/Vision%20Pro%20(Designed%20for%20iPad).png
-[iPhone]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/iPhone.png
-[Android]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/Android.png
-[iPad]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/iPad.png
-[macOS]: https://raw.githubusercontent.com/alexrabin/is_ios_app_on_mac/main/screenshots/macOS.png
+[mac-ipad]: screenshots/Mac%20(Designed%20for%20iPad).png
+[vision-ipad]: screenshots/Vision%20Pro%20(Designed%20for%20iPad).png
+[iphone]: screenshots/iPhone.png
+[android]: screenshots/Android.png
+[ipad]: screenshots/iPad.png
+[macos]: screenshots/macOS.png
